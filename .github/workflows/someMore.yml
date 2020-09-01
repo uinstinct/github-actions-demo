@@ -1,0 +1,35 @@
+name: someMore
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    doThisSecretly:
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - 
+                name: print calender
+                run: cal
+            
+            - 
+                name: print a secret
+                run: echo "${{secrets.FiggToken}}"
+            
+    anotherWay:
+        runs-on: ubuntu-20.04
+        env:
+            HEATTOKEN: secrets.HEATTOKEN
+            boolean: true
+        steps:
+            - uses: actions/checkout@v2
+            
+            - name: print the HEAT
+              run: echo "${{env.HEATTOKEN}}" # we put a value inside an echo statement in this way
+
+            -
+                name: 'print a boolean'
+                run: echo "${{env.boolean}"
