@@ -13,6 +13,5 @@ jobs: # indent this with the on event
     steps:
         - uses: actions/checkout@v2
 
-        - 
-            name: change on README
-            run: echo "the README.md file on the project root was changed"
+        - name: change on README
+          run: echo "the README.md file on the project root was changed"
