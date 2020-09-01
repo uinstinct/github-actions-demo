@@ -32,4 +32,4 @@ jobs:
 
             -
                 name: 'print a boolean'
-                run: echo "${{env.boolean}"
+                run: echo "${{env.boolean}}"
