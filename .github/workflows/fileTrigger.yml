@@ -10,8 +10,9 @@ jobs: # indent this with the on event
     readout:
         runs-on: ubuntu-latest
     
-    steps:
-        - uses: actions/checkout@v2
+        steps:
+            - uses: actions/checkout@v2
 
-        - name: change on README
-          run: echo "the README.md file on the project root was changed"
+            - 
+                name: change on README
+                run: echo "the README.md file on the project root was changed"
