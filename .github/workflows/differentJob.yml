@@ -27,4 +27,4 @@ jobs:
             seperator: 'and'
         needs: job2
         steps:
-            - run: echo "${{needs.job1.outputs.axel}} ${{seperator}} ${{needs.job1.ouputs.shawn}}"
+            - run: echo "${{needs.job1.outputs.axel}} ${{env.seperator}} ${{needs.job1.ouputs.shawn}}"
