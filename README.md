@@ -2,4 +2,10 @@
 
 Using github-actions to automate the process.
 
-- Created a starter action
+---
+
+## Actions 
+
+- Created a starter action - `starter.yml`
+
+- Created another starter action - `mystarter.yml`
