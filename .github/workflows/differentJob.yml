@@ -1,0 +1,30 @@
+name: "differentJob"
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    job1: # name of the job
+        runs-on: macos-latest
+        
+        outputs:
+            out1: ${{steps.axel.outputs.kick}}
+            out2: ${{steps.shawn.outputs.kick}}
+
+        steps:
+            - 
+                id: axel
+                run: echo "::set-output name=kick::fireball tornado"
+            -
+                id: shawn
+                run: echo "::set-ouput name=kick::wolfgang attack"
+    
+    job2:
+        runs-on: ubuntu-20.04
+        env: # variable
+            seperator: 'and'
+        needs: job2
+        steps:
+            - run: echo "${{needs.job1.outputs.axel}} ${{job2.env.seperator}} ${{needs.job1.ouputs.shawn}}"

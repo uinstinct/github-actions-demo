@@ -1,0 +1,20 @@
+name: my_starter
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: only date
+        run: echo "commit was made at $(date)"
+      
+      - name: date and cal
+        run: |
+          echo $(cal)
+          echo $(date)
