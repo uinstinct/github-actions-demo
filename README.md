@@ -8,7 +8,7 @@ Using github-actions to automate the process.
 
 ![my_starter](https://github.com/uinstinct/github-actions-demo/workflows/my_starter/badge.svg)
 
-
+![someMore](https://github.com/uinstinct/github-actions-demo/workflows/someMore/badge.svg)
 
 ---
 
