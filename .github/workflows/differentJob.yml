@@ -25,6 +25,6 @@ jobs:
         runs-on: ubuntu-20.04
         env: # variable
             seperator: 'and'
-        needs: job2
+        needs: job1
         steps:
             - run: echo "${{needs.job1.outputs.axel}} ${{env.seperator}} ${{needs.job1.ouputs.shawn}}"
